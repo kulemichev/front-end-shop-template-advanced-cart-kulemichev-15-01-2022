@@ -3,7 +3,7 @@ import {
   basketContainer,
   eraseBasket,
   createBasket,
-  } from './Teachersbasket.js';
+  } from './basket.js';
 
 const cartCounterLabel = document.querySelector('#cart-counter-label');
 const contentContainer = document.querySelector('#content-container');
@@ -31,6 +31,7 @@ const disableControls = (t, fn) => {
   t.disabled = true;
   contentContainer.removeEventListener('click', fn);
 };
+
 const enableControls = (t, fn) => {
   t.disabled = false;
   contentContainer.addEventListener('click', fn);
@@ -40,7 +41,7 @@ const writeProductToBasket = (t, arr) => {
   
   let item = null;
   let product = {
-    getProductName: getProductName(t),
+    productName: getProductName(t),
     productCode: getProductName(t),
     price: getMockData(t),
     count: 1,

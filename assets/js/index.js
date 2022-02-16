@@ -1,3 +1,3 @@
-import { shopInit } from "./main.js";
+import {shopInit} from './main.js';
 
 shopInit();
