@@ -3,7 +3,7 @@ import {
   basketContainer,
   eraseBasket,
   createBasket,
-  } from './basket.js';
+  } from './Teachersbasket.js';
 
 const cartCounterLabel = document.querySelector('#cart-counter-label');
 const contentContainer = document.querySelector('#content-container');
