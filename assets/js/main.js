@@ -1,9 +1,8 @@
-
 import {
   basketContainer,
   eraseBasket,
   createBasket,
-  } from './basket.js';
+} from './basket.js';
 
 const cartCounterLabel = document.querySelector('#cart-counter-label');
 const contentContainer = document.querySelector('#content-container');
@@ -14,7 +13,7 @@ let productInBasketArr = null;
 let cardPrice = 0;
 let restoreHTML = null;
 
-const cartCounterLabelPrint = (c) => (c > 0 ) ? cartCounterLabel.innerHTML = `${c}` : cartCounterLabel.style.display = 'none';
+const cartCounterLabelPrint = (c) => (c > 0) ? cartCounterLabel.innerHTML = `${c}` : cartCounterLabel.style.display = 'none';
 
 const incrementCounter = () => {
   cartCounterLabelPrint(++cardCounter);
@@ -38,7 +37,7 @@ const enableControls = (t, fn) => {
 };
 
 const writeProductToBasket = (t, arr) => {
-  
+
   let item = null;
   let product = {
     productName: getProductName(t),
@@ -49,17 +48,17 @@ const writeProductToBasket = (t, arr) => {
   };
   if (arr !== null) {
     let i = 0;
-    
+
     while ((item === null) && (i < arr.length)) {
-      (arr[i].productCode === getProductName(t)) ? item = i : i++
+      (arr[i].productCode === getProductName(t)) ? item = i: i++
     };
-    if (item === null) arr.push(product) 
-      else {
-        arr[item].count++;
-        arr[item].sum = Math.round((arr[item].sum + arr[item].price) * 100) / 100;
-      }; 
+    if (item === null) arr.push(product)
+    else {
+      arr[item].count++;
+      arr[item].sum = Math.round((arr[item].sum + arr[item].price) * 100) / 100;
+    };
   } else arr = [product];
-   
+
   return arr;
 };
 
@@ -73,24 +72,24 @@ const btnClickHandler = (e) => {
     incrementCounter();
 
     productInBasketArr = writeProductToBasket(target, productInBasketArr);
-    
+
     cardPrice = getPrice(target, cardPrice);
-    restoreHTML = target.innerHTML;  
+    restoreHTML = target.innerHTML;
     target.innerHTML = `Added ${cardPrice.toFixed(2)} $`;
     disableControls(target, btnClickHandler);
-      
-      setTimeout(() => {
-        target.innerHTML = restoreHTML;
-       
+
+    setTimeout(() => {
+      target.innerHTML = restoreHTML;
+
       enableControls(target, btnClickHandler);
 
-      }, interval);
-    };
+    }, interval);
+  };
 };
 
 const basketBtnHandler = (e) => {
   const target = e.target;
-  
+
   if (target) {
     eraseBasket();
     if (!target.classList.contains('basket__btn-next')) {
@@ -103,7 +102,6 @@ const basketBtnHandler = (e) => {
       cartCounterLabelPrint(cardCounter);
     };
   };
-  
 };
 
 const createBasketWork = (c, pArr) => {
@@ -115,16 +113,16 @@ const createBasketWork = (c, pArr) => {
 
 const delProductHandler = (e) => {
   const target = e.target;
- 
+
   if (target && target.matches('.basket__item-del')) {
     let b = true;
     let i = 0;
-    
+
     while (b && i < productInBasketArr.length) {
       if (productInBasketArr[i].productCode === target.parentElement.dataset.code) {
         cardPrice -= productInBasketArr[i].sum;
         cardCounter -= productInBasketArr[i].count;
-        
+
         productInBasketArr.splice(i, 1);
         b = false;
       } else i++;
