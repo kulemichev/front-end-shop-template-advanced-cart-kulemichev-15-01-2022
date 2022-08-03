@@ -1,10 +1,8 @@
 
 .breadcrumb {
   padding: 1rem 0 0 0;
-
   opacity: 0.5;
   background-color: transparent;
-
   font-size: 14px;
 
   a {
@@ -14,7 +12,6 @@
   &-item {
     + .breadcrumb-item::before {
       content: ">";
-
       color: $color-light;
     }
 
@@ -27,7 +24,6 @@
 .page-title {
   &__header {
     color: $color-light;
-
     font-size: 2.85rem;
   }
 
@@ -35,11 +31,9 @@
     width: 100%;
     margin-top: 6px;
     padding: 3px 10px 5px;
-
     color: $color-light;
     border-color: $color-light;
     background-color: $color-dark;
-
     font-size: 1.25rem;
   }
 }
@@ -51,9 +45,7 @@
 .item {
   &-wrapper {
     position: relative;
-
     margin-bottom: 30px;
-
     border: 1px solid $color-light;
 
     .container-fluid {
@@ -64,42 +56,33 @@
   &-image {
     display: flex;
     overflow: hidden;
-
     height: 180px;
-
     background-color: rgba($color-light, 0.75);
-
     align-items: center;
     justify-content: center;
   }
 
   &-title {
     padding-top: 0.75rem;
-
     color: $color-light;
-
     font-size: 1.75rem;
   }
 
   &-description {
     color: $color-light;
-
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 
   &-characteristics {
     margin-top: 15px;
-
     font-size: 1.25rem;
     line-height: 1.75rem;
 
     span {
       display: block;
-
       margin-top: 7px;
       margin-bottom: 7px;
-
       color: $color-light;
     }
   }
@@ -111,7 +94,6 @@
 
     button {
       display: block;
-
       width: 30px;
       height: 30px;
       padding: 0;
@@ -124,9 +106,7 @@
 
   &-price {
     text-align: center;
-
     color: $color-light;
-
     font-size: 2rem;
     font-weight: bold;
   }
@@ -137,13 +117,10 @@
     button {
       margin-bottom: 30px !important;
       padding: 8px 5px 10px;
-
       text-transform: uppercase;
-
       color: $color-light;
       border-color: $color-light;
       border-radius: 0;
-
       font-weight: bold;
 
       @media (min-width: 1200px) {
@@ -166,14 +143,12 @@
 
       i {
         margin-left: 5px;
-
         font-size: 1rem;
       }
     }
 
     &__cart {
       transition: background-color 0.5s;
-
       background-color: rgba($color-light, 0.2);
 
       &.disabled,
@@ -196,13 +171,11 @@
 .page-pagination {
   &__more {
     margin-bottom: 30px;
-
     text-align: center;
-
     font-size: 2rem;
 
     a {
       color: $color-light;
     }
   }
-}
+}

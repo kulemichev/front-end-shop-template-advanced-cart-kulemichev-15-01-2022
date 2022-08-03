@@ -1,7 +1,6 @@
 
 .sidebar-filter {
   padding: 15px 30px 30px;
-
   color: $color-light;
 
   @media (min-width: 992px) {
@@ -22,7 +21,6 @@
 
     &-label {
       margin-left: 0.5rem;
-
       font-size: 1.25rem;
     }
 
@@ -42,13 +40,10 @@
 
       &::before {
         display: block;
-
         width: 0.8rem;
         height: 0.8rem;
         margin-top: 0.35rem;
-
         content: "";
-
         border: 1px solid $color-light;
       }
     }
@@ -56,11 +51,8 @@
 
   &__more {
     display: block;
-
     margin-bottom: 30px;
-
     color: $color-light;
-
     font-size: 1.25rem;
   }
 

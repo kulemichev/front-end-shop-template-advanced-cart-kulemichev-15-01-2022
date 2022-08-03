@@ -33,16 +33,13 @@
   &__carousel {
     margin-right: 0;
     margin-left: 0;
-
     border-bottom: 1px solid $color-light;
     background-color: rgba(#000000, 0.3);
   }
 
   &__navbar-search {
     height: 50px;
-
     border: 1px solid $color-dark;
-
     flex-wrap: nowrap;
 
     @media (max-width: 991px) {
@@ -56,7 +53,6 @@
       border-radius: 0;
       background-color: transparent;
       box-shadow: none;
-
       font-size: 1.2rem;
 
       @media (min-width: 992px) {
@@ -70,7 +66,6 @@
     button {
       margin: 5px;
       padding: 0;
-
       color: $color-light;
       border-color: $color-dark;
       background-color: $color-dark;
@@ -96,7 +91,6 @@
     width: 50px;
     height: 50px;
     margin-left: 30px;
-
     color: $color-dark;
     border: none;
     border-radius: 0;
@@ -117,12 +111,9 @@
       position: absolute;
       top: -12px;
       left: -12px;
-
       width: 24px;
       height: 24px;
-
       transition: background-color 0.5s;
-
       color: $color-light;
       border-radius: 12px;
       background-color: $color-dark;
@@ -137,4 +128,4 @@
 
 .fa-shopping-cart {
   font-size: 1.5rem;
-}
+}
